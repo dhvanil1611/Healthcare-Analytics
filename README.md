@@ -180,16 +180,6 @@ npm run preview
 - createdAt
 ```
 
-### Appointments Table
-```
-- id (UUID)
-- userId (FK)
-- doctorName, specialization
-- date, time
-- status, notes
-- createdAt
-```
-
 ### Reports Table
 ```
 - id (UUID)
@@ -254,12 +244,6 @@ The system is ready for ML model integration:
 ### Health Metrics
 - `GET /api/health/metrics` - Get health metrics (Protected)
 - `POST /api/health/metrics` - Add health metric (Protected)
-
-### Appointments
-- `GET /api/appointments` - Get user appointments (Protected)
-- `POST /api/appointments` - Book appointment (Protected)
-- `PUT /api/appointments/:id` - Update appointment (Protected)
-- `DELETE /api/appointments/:id` - Cancel appointment (Protected)
 
 ### Reports
 - `POST /api/reports/upload` - Upload medical report (Protected)
@@ -371,9 +355,9 @@ healthcare-system/
 │   ├── src/
 │   │   ├── server.ts
 │   │   ├── data-source.ts
-│   │   ├── entities/ (User, Prediction, Appointment, Report, etc.)
+│   │   ├── entities/ (User, Prediction, Report, etc.)
 │   │   └── migrations/
-│   ├── routes/ (auth, predictions, appointments, reports, health)
+│   ├── routes/ (auth, predictions, reports, health)
 │   ├── middleware/ (auth.ts)
 │   ├── tsconfig.json
 │   └── .env
@@ -485,10 +469,6 @@ PORT=5000
 ### Reports
 - `GET /api/reports` - Get user's reports
 - `POST /api/reports` - Upload new report
-
-### Appointments
-- `GET /api/appointments` - Get user's appointments
-- `POST /api/appointments` - Book new appointment
 
 ### Health
 - `GET /api/health/metrics` - Get health metrics
