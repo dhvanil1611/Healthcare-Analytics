@@ -1,0 +1,9 @@
+/* Normal black cursor */
+* {
+  cursor: auto !important;
+}
+
+/* Ensure all elements use default cursor */
+button, a, input, textarea, select, div, span, p, h1, h2, h3, h4, h5, h6 {
+  cursor: auto !important;
+}
